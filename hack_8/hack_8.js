@@ -11,6 +11,13 @@
 let arr = ["foo","bar","baz","qux","echo"];
 let result = [];
 
+for(let i = 1; i<4; i++){
+    result.push(arr[i]);
+}
+
+// map doesnt modify the original array so we need to asign it to result
+result = result.map(item => item.replace('a','@').replace('qux','QUX'));
+
 
 //export result
 module.exports = result;

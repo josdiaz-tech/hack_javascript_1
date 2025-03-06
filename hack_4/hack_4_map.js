@@ -7,6 +7,15 @@
  */
 let result = [];
 
+let arr = [];
+
+for(let i = 1; i <8; i+=2){
+    result.push(i);
+}
+// arr = [1,3,5,7]
+arr.map(num => result.push(num));
+
+
 
 //export result
 module.exports = result;

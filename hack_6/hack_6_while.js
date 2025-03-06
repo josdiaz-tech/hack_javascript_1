@@ -9,6 +9,11 @@
 let str = "fooziman";
 let result = [];
 
-
+let longitud = str.length;
+let i = 0;
+while(i<longitud){
+    result.push(str[i]);
+    i++;
+}
 //export result
 module.exports = result;

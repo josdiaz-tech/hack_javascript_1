@@ -19,6 +19,28 @@ let numberArray = [1,2,3,4,5];
 let stringArray = ["foo","bar","baz","qux","echo"]
 let result = [];
 
+//function to convert digit to word
+const digitToWord = num => ['zero','one','two','three','four', 'five','six','seven','eight','nine'][num];
 
+//produces [ 'one', 2, 'three', 4, 'five' ]
+numberArray = numberArray.map( num => {
+    if(num%2 != 0){
+        num = digitToWord(num);
+        return num;
+    }
+    return num;
+});
+
+//produces [ 'f00', 'Bar', 'b@z', 'quX', '3ch0' ]
+stringArray = stringArray.map( (item) => {
+    return item.replaceAll('o','0').replace('e','3').replace('x','X').replace('bar', 'Bar').replace('baz','b@z')
+});
+
+//construc the new array
+result.push('h@ck', numberArray, 'h@ck', stringArray, 'h@ck');
+
+result = result.flat();
+
+//console.log(result);
 //export result
 module.exports = result;
